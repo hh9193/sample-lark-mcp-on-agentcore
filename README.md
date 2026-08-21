@@ -451,6 +451,11 @@ lark-cli 官方 20+ 个业务域 Skill 沉淀了多步操作的最佳实践—�
 - **路径白名单正则。** 仅匹配 `lark-[a-z-]+/scripts/[a-z0-9_]+.py` 格式，拒绝路径遍历和非法文件名。
 - **沙箱执行。** 使用 `execFile`（非 shell）、`cwd=/tmp`、30s 超时、10MB 输出上限，参数仅接受字符串数组。环境变量最小化（仅 PATH/HOME/LANG，无 AWS 凭证）；共享并发信号量（防资源耗尽）和优雅关闭追踪。
 
+## Quick使用补充
+鉴权lambda 
+LarkMcpOnAgentCoreOAuth-oauth
+的环境变量-ALLOWED_DOMAINS需要改成quick.aws.com
+
 ## 风险提示
 
 AI Agent 以用户身份调用飞书 API 存在模型幻觉、prompt injection 等固有风险。详见 [lark-cli 安全与风险提示](https://github.com/larksuite/cli/blob/main/README.zh.md#安全与风险提示使用前必读)。
